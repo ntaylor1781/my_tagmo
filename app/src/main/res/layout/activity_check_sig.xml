@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtTagInfo"
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        android:layout_column="0"
+        android:layout_row="18"
+        android:text="txtTagInfo" />
+
+    <Button
+        android:id="@+id/btnGetTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:text="Scan Tag" />
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_column="0"
+        android:layout_row="5"
+        android:text="@string/middleCenterError" />
+
+</GridLayout>

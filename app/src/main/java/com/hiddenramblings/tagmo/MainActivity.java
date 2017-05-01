@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity /* implements TagCreateDialo
     Button btnEditDataSSB;
     @ViewById(R.id.btnViewHex)
     Button btnViewHex;
+    @ViewById(R.id.btnCheckSig)
+    Button btnCheckSig;
 
     @ViewById(R.id.cbAutoSaveOnScan)
     CheckBox cbAutoSaveOnScan;
@@ -320,6 +322,14 @@ public class MainActivity extends AppCompatActivity /* implements TagCreateDialo
             return;
         }
         Intent intent = new Intent(this, HexViewerActivity_.class);
+        intent.setAction(Actions.ACTION_EDIT_DATA);
+        intent.putExtra(Actions.EXTRA_TAG_DATA, this.currentTagData);
+        startActivity(intent);
+    }
+
+    @Click(R.id.btnCheckSig)
+    void checkSig() {
+        Intent intent = new Intent(this, CheckSignatureActivity_.class);
         intent.setAction(Actions.ACTION_EDIT_DATA);
         intent.putExtra(Actions.EXTRA_TAG_DATA, this.currentTagData);
         startActivity(intent);

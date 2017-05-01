@@ -19,20 +19,19 @@ apt {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "com.hiddenramblings.tagmo"
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion 18
+        targetSdkVersion 25
         versionCode 4
         versionName "2.3.4"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -41,7 +40,7 @@ android {
             dimension "abi"
             ndk {
                 abiFilters "x86", "armeabi-v7a", "armeabi"
-                versionCode = 0
+                versionCode = 4
             }
         }
 
@@ -67,9 +66,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 }
